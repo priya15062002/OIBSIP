@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background:linear-gradient(90deg,rgb(238, 164, 26) 50%,skyblue 50%);
+    height: 100vh;
+   display:flex;
+   justify-content: center;
+  align-items: center;
+}
+.wrapper{
+    background-color: white;
+    width:90%;
+    height: 90vh;
+}
+.navbar .logo{
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 3px solid skyblue;
+    border-radius: 50%;
+    border-right-color:transparent ;
+    position: relative;
+}
+.navbar .logo::before{
+   content:"unitech";
+   color: #000;
+   font-size: 35px;
+   position:absolute;
+   top: 50%;
+   left: 50%;
+   font-family: 'Arizonia', cursive;
+   transform: translate(-10%,-50%);
+}
+.navbar ,.navlist{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+   
+}
+.navlist li{
+    list-style: none;
+    padding: 20px;
+}
+.navlist a{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+}
+.navlist a::before{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: .5s ease-in-out;
+}
+.navlist a:hover::before{
+    width: 100%;
+}
+.hero{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8%;
+}
+.hero img{
+    width: 35vw;
+    padding-right: 40px;
+    height: 300px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding:  20px 20px;
+    border-left: 4px solid #3c6255;
+}
+.content h3{
+    color:skyblue;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.content h1{
+    color: orange; 
+    font-size: 50px;
+}
+.content p{
+    color:black ;
+    font-size: 18px;
+    line-height: 30px;
+}
+.content button{
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    background-color: grey;
+    cursor: pointer;
+}
+.content button:hover{
+    background-color: white;
+    color: #3c6255;
+}
+.hamburger{
+    display:none;
+}
+.hamburger span{
+    width:15px;
+    height:3px;
+    background-color: black;
+    display: block;
+    margin: 5px;
+    
+}
+.hamburger span:nth-child(2){
+    width: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:796px){
+    .navlist{
+        display:none;
+    }
+    .hamburger{
+        display:block;
+    }
+
+}
+    
